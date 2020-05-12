@@ -39,7 +39,7 @@ class SignUpVC: UIViewController {
                             return
                         }
                         let user = user?.user
-                        // Firebase setup. (Changed from user?.uid to user?.user.uid)
+                        // Firebase setup
                         guard let uid = user?.uid else { return }
                         Auth.auth().signIn(withEmail: email, password: password)
                         let userValues = ["name": name, "email": email]
@@ -62,7 +62,7 @@ class SignUpVC: UIViewController {
         }
     }
     
-    // Transfers userX from SignUpVC -> MainScreenVC.
+    // Transfers user from SignUpVC -> MainScreenVC.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "signUpToMain" {
             let vc = segue.destination as? MainScreenVC

@@ -49,7 +49,7 @@ class AskQuestionVC: UIViewController, UITextViewDelegate {
         self.performSegue(withIdentifier: "AskToMain", sender: self.userX)
     }
     
-    // Transfers userX from AskQuestionVC -> MainScreenVC.
+    // Transfers user from AskQuestionVC -> MainScreenVC.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AskToMain" {
             let vc = segue.destination as? MainScreenVC

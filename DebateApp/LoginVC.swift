@@ -48,7 +48,7 @@ class LoginVC: UIViewController {
         }
     }
     
-    // Transfers userX from LoginVC -> MainScreenVC.
+    // Transfers user from LoginVC -> MainScreenVC.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginToMain" {
             let vc = segue.destination as? MainScreenVC
